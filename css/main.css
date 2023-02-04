@@ -1,4 +1,6 @@
 .menu-btn {
+  background: none;
+  border: none;
   position: absolute;
   z-index: 3;
   right: 35px;
