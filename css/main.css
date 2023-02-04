@@ -202,8 +202,7 @@ main {
 }
 #mouse-scroll {
   position: relative;
-  margin: auto;
-  left: 50%;
+  margin: auto 50%;
   bottom: 0;
   /*-webkit-transform: translateX(-50%);*/
   z-index: 9999;
