@@ -150,6 +150,8 @@ h3 {
     .main-container {
       margin-top: 10vh;
       font-size: 2rem;
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -385,7 +387,7 @@ main {
 
 @media (max-width: 450px) {
   #text-drop {
-    font-size: 60px;
+    font-size: 40px;
   }
   .smile {
     font-size:50px;
