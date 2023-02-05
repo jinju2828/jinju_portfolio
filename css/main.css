@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
 .menu-btn {
   background: none;
   border: none;
@@ -102,7 +104,7 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI",  Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/background.jpg);
@@ -130,6 +132,7 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
+    font-weight: 700;
     font-size: 6rem; }
   h1.sm-heading,
   h2.sm-heading,
@@ -186,8 +189,9 @@ main {
     /*margin-top: 20vh;*/
   }
   .main-container {
-    margin-top: 15vh;
+    margin-top: 3vh;
     font-size: 2.5rem;
+    /*margin-left: 10%;*/
   }
 
   #mouse-scroll {
@@ -199,10 +203,16 @@ main {
 
 #mouse-scroll {
   style: block;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  /*flex-direction: column;*/
+  /*text-align: center;*/
 }
 #mouse-scroll {
   position: relative;
   margin: auto 50%;
+  /*left: 50%;*/
   bottom: 0;
   /*-webkit-transform: translateX(-50%);*/
   z-index: 9999;
@@ -300,6 +310,114 @@ main {
     opacity: 1;
   }
 }
+
+
+#text-drop {
+  position: relative;
+  display: flex;
+  font-size: 50px;
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+.h {
+  opacity:0;
+  animation: drop .4s linear forwards;
+  /*color: orangered;*/
+  color: #00f5d4;
+}
+
+.e {
+  opacity:0;
+  animation: drop .4s linear forwards .2s;
+  /*color: #f15bb5;*/
+  color: #00f5d4;
+}
+
+.l {
+  opacity:0;
+  animation: drop .4s linear forwards .4s;
+  /*color: #fee440;*/
+  color: #00f5d4;
+}
+
+.l2 {
+  opacity:0;
+  animation: drop .4s linear forwards .6s;
+  /*color: #00bbf9;*/
+  color: #00f5d4;
+}
+
+.o {
+  opacity:0;
+  animation: drop .4s linear forwards .8s;
+  color: #00f5d4;
+}
+
+.i {
+  margin-left: 10px;
+  opacity:0;
+  animation: drop .4s linear forwards 2s;
+  color: burlywood;
+}
+
+.dot {
+  opacity:0;
+  animation: drop .4s linear forwards 1.2s;
+  /*color: palegreen;*/
+  color: #00f5d4;
+}
+
+@keyframes drop {
+  0% {transform: translateY(-200px) scaleY(0.9); opacity: 0;}
+  5% {opacity: .7;}
+  50% {transform: translateY(0px) scaleY(1); opacity: 1;}
+  65% {transform: translateY(-17px) scaleY(.9); opacity: 1;}
+  75% {transform: translateY(-22px) scaleY(.9); opacity: 1;}
+  100% {transform: translateY(0px) scaleY(1); opacity: 1;}
+}
+
+.smile {
+  opacity:0;
+  animation: drop .4s linear forwards 1.2s;
+  color: #9b5de5;
+  font-size:90px;
+  margin-left:15px;
+}
+
+@media (max-width: 450px) {
+  #text-drop {
+    font-size: 60px;
+  }
+  .smile {
+    font-size:50px;
+  }
+}
+
+
+.fade-in {
+  animation: fadeIn 5.5s;
+  /*animation-delay: 3s;*/
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
+@keyframes fadeIn {
+  /*0% { opacity: 0; }*/
+  /*!*50% { opacity: 0.5;}*!*/
+  /*100% { opacity: 1; }*/
+  50% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+
 
 .arrow {
   position: absolute;
@@ -704,3 +822,68 @@ main {
     font-size: 5rem; }
   .projects {
     grid-template-columns: 1fr; } }
+
+
+section {
+  display: flex;
+  /*background: #000;*/
+  /*min-height: 100vh;*/
+  align-items: center;
+  justify-content: left;
+  /*left: 50%;*/
+  font-family: "Recoleta", sans-serif;
+  font-weight: 400 !important;
+}
+
+.content {
+  position: relative;
+
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 8em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #03a9f4;
+}
+
+.content h2:nth-child(2) {
+  color: #03a9f4;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+            0% 45%,
+            16% 44%,
+            33% 50%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+    );
+  }
+}
